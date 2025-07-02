@@ -4,6 +4,6 @@
     align-items: center;
     padding: 5px 4%;
 }
-.navbar .logo{
+.navbar .profile-image{
     width: max(6% , 40px);
 }

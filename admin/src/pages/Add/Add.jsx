@@ -1,18 +1,18 @@
 import React, { useState } from "react";
 import "./Add.css";
 import { IoCloudUploadOutline } from "react-icons/io5";
-import axios from "axios"
-const Add = () => {
-  const url = "http://localhost:4000"
+import axios from "axios";
+import { toast } from "react-toastify";
+const Add = ({url}) => {
+
   const [image, setImage] = useState(false);
   const [data, setData] = useState({
     name: "",
     description: "",
     price: "",
     category: "Salaad",
-    type : "veg"
   });
-  const onChangeHandler =(e) => {
+  const onChangeHandler = (e) => {
     const name = e.target.name;
     const value = e.target.value;
     setData((data) => ({ ...data, [name]: value }));
@@ -26,17 +26,18 @@ const Add = () => {
     formData.append("category", data.category);
     formData.append("type", data.type);
     formData.append("image", image);
-    const response = await axios.post(`${url}/api/food/add`, formData , { headers: { 'Content-Type': 'multipart/form-data' } })
+    const response = await axios.post(`${url}/api/food/add`, formData);
     if (response.data.success) {
       setData({
-        name: '',
+        name: "",
         description: "",
         price: "",
-        category : ""
-      })
-      setImage(false)
+        category: "",
+      });
+      setImage(false);
+      toast.success(response.data.message)
     } else {
-      console.log("Error")
+      toast.error(response.data.error)
     }
   };
   return (
@@ -89,7 +90,7 @@ const Add = () => {
         <div className="add-category-price">
           <div className="add-category">
             <p>Product Category</p>
-            <select onChange={onChangeHandler} name="category">
+            <select onChange={onChangeHandler} name="category" required>
               <option value="Salaad">Salaad</option>
               <option value="Rolls">Rolls</option>
               <option value="Desert">Desert</option>

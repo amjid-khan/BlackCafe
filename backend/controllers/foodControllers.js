@@ -3,7 +3,6 @@ import fs from "fs"
 
 // add food items
 const addFood = async (req, res) => {
-    console.log("req.file:", req.file);
     const { name, description, price, category, type } = req.body;
     const image_filename = req.file.filename;
 

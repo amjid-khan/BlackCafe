@@ -9,7 +9,7 @@ dotenv.config()
 
 //app config 
 const app = express()
-const port = 4000
+
 
 // middleware
 app.use(express.json())
@@ -24,6 +24,6 @@ app.use("/api/food", foodRouter)
 app.use("/api/user", userRouter)
 
 
-app.listen(port, () => {
-    console.log(`Server started on port : ${port}`);
+app.listen(process.env.PORT, () => {
+    console.log(`Server started on port : ${process.env.PORT}`);
 })

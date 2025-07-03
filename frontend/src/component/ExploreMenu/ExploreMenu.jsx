@@ -5,11 +5,11 @@ import "./ExploreMenu.css";
 const ExploreMenu = ({ category, setCategory }) => {
   const menu_list = [
     {
-      name: "amjid",
+      name: "Salaad",
       image: "/3.jpg",
     },
     {
-      name: "menu 2",
+      name: "Rolls",
       image: "/4.jpg",
     },
     {

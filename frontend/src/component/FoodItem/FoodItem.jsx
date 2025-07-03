@@ -9,11 +9,11 @@ import { IoIosStarOutline } from "react-icons/io";
 import { StoreContext } from "../context/StoreContext";
 
 const FoodItem = ({ id, name, price, description, image }) => {
-  const { cartItems, addToCart, removeFromCart } = useContext(StoreContext);
+  const { cartItems, addToCart, removeFromCart , url } = useContext(StoreContext);
   return (
     <div className="food-item">
       <div className="food-item-img-container">
-        <img className="food-item-image" src={image} alt="" />
+        <img className="food-item-image" src={url + "/uploads/" + image} alt="" />
         {!cartItems[id] ? (
           <button className="add" onClick={() => addToCart(id)}>
             <TiPlus />

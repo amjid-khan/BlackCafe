@@ -5,6 +5,7 @@ import foodRouter from "./routes/foodRoute.js"
 import path from "path"
 import userRouter from "./routes/userRoutes.js"
 import dotenv from "dotenv"
+import cartRouter from "./routes/cartRoute.js"
 dotenv.config()
 
 //app config 
@@ -22,6 +23,7 @@ connectDb()
 //api endpoints
 app.use("/api/food", foodRouter)
 app.use("/api/user", userRouter)
+app.use("/api/cart", cartRouter)
 
 
 app.listen(process.env.PORT, () => {

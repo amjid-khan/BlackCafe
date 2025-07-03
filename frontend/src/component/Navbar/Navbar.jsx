@@ -1,14 +1,23 @@
-
-import React, { useContext, useState } from "react";
+import React, { Profiler, useContext, useState } from "react";
 import "./Navbar.css";
 import { CiSearch } from "react-icons/ci";
 import { HiOutlineShoppingBag } from "react-icons/hi2";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { StoreContext } from "../context/StoreContext";
+import { IoBag } from "react-icons/io5";
+import { IoLogOut } from "react-icons/io5";
+import { FaUserAlt } from "react-icons/fa";
+
 
 const Navbar = ({ setShowLogin }) => {
   const [menu, setMenu] = useState("home");
-  const { getTotalAmount } = useContext(StoreContext);
+  const { getTotalAmount, token, setToken } = useContext(StoreContext);
+  const navigate = useNavigate()
+  const handleLogout = () => {
+    localStorage.removeItem("Token")
+    setToken("")
+    navigate("/")
+  }
   return (
     <div className="navbar">
       <Link to="/">
@@ -52,7 +61,22 @@ const Navbar = ({ setShowLogin }) => {
           </Link>
           <div className={getTotalAmount() ? "dot" : ""}></div>
         </div>
-        <button onClick={() => setShowLogin(true)}>sign in</button>
+        {!token ? (
+          <button onClick={() => setShowLogin(true)}>sign in</button>
+        ) : (
+          <div className="navbar-profile">
+            <FaUserAlt className="profile-icon"/>
+            <ul className="nav-profile-dropdown">
+              <li>
+                <IoBag style={{color : "crimson"}}/> <p>Orders</p>
+              </li>
+              <hr />
+              <li onClick={handleLogout}>
+                <IoLogOut style={{color : "crimson"}}/> <p>Logout</p>
+              </li>
+            </ul>
+          </div>
+        )}
       </div>
     </div>
   );

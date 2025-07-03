@@ -3,6 +3,9 @@ import cors from "cors"
 import connectDb from "./config/db.js"
 import foodRouter from "./routes/foodRoute.js"
 import path from "path"
+import userRouter from "./routes/userRoutes.js"
+import dotenv from "dotenv"
+dotenv.config()
 
 //app config 
 const app = express()
@@ -18,14 +21,9 @@ connectDb()
 
 //api endpoints
 app.use("/api/food", foodRouter)
+app.use("/api/user", userRouter)
 
-app.get("/", (req, res) => {
-    res.send("Api working")
-})
 
 app.listen(port, () => {
     console.log(`Server started on port : ${port}`);
 })
-
-
-//mongodb+srv://amjidkurrmywal:kurram.00@cluster0.aophofw.mongodb.net/

@@ -1,12 +1,15 @@
 import express from "express"
 import cors from "cors"
+import dotenv from "dotenv"
+dotenv.config()
 import connectDb from "./config/db.js"
 import foodRouter from "./routes/foodRoute.js"
 import path from "path"
 import userRouter from "./routes/userRoutes.js"
-import dotenv from "dotenv"
+
 import cartRouter from "./routes/cartRoute.js"
-dotenv.config()
+import orderRouter from "./routes/orderRoute.js"
+
 
 //app config 
 const app = express()
@@ -24,6 +27,7 @@ connectDb()
 app.use("/api/food", foodRouter)
 app.use("/api/user", userRouter)
 app.use("/api/cart", cartRouter)
+app.use("/api/order", orderRouter)
 
 
 app.listen(process.env.PORT, () => {

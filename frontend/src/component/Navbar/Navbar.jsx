@@ -67,8 +67,8 @@ const Navbar = ({ setShowLogin }) => {
           <div className="navbar-profile">
             <FaUserAlt className="profile-icon"/>
             <ul className="nav-profile-dropdown">
-              <li>
-                <IoBag style={{color : "crimson"}}/> <p>Orders</p>
+              <li onClick={()=> navigate("/myorders")}>
+                <IoBag  style={{color : "crimson"}}/> <p>Orders</p>
               </li>
               <hr />
               <li onClick={handleLogout}>

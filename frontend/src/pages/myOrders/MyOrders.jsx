@@ -1,5 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import "./MyOrders.css";
+import { FaBox } from "react-icons/fa";
+
 
 import axios from "axios";
 import { StoreContext } from "../../component/context/StoreContext";
@@ -15,7 +17,6 @@ const MyOrders = () => {
     setData(response.data.data);
   };
   useEffect(() => {
-    console.log("Token in useEffect:", token);
     if (token) {
       fetchOrders();
     }
@@ -28,7 +29,8 @@ const MyOrders = () => {
               {data.map((order, index) => {
                   return (
                       <div key={index} className="my-orders-order">
-                          <img src="" alt="" />
+                         <FaBox style={{fontSize : "40px"}}/>
+
                           <p>{order.items.map((item, index) => {
                               if (index === order.items.length - 1) {
                                   
@@ -40,7 +42,7 @@ const MyOrders = () => {
                           <p>${order.amount}.00</p>
                           <p>Items : {order.items.length}</p>
                           <p><span>&#x25cf;</span><b>{order.status}</b></p>
-                          <button>Track Order</button>
+                          <button onClick={fetchOrders}>Track Order</button>
                       </div>
                   )
               })}

@@ -16,7 +16,7 @@ const FoodItem = ({ id, name, price, description, image }) => {
         <img className="food-item-image" src={url + "/uploads/" + image} alt="" />
         {!cartItems[id] ? (
           <button className="add" onClick={() => addToCart(id)}>
-            <TiPlus />
+            <TiPlus style={{color : "black"}}/>
           </button>
         ) : (
           <div className="food-item-counter">
@@ -40,9 +40,6 @@ const FoodItem = ({ id, name, price, description, image }) => {
         <div className="food-item-name-rating">
           <p>{name}</p>
           <div className="rating">
-            <p>
-              <IoIosStar style={{ color: "#FFD700" }} />
-            </p>
             <p>
               <IoIosStar style={{ color: "#FFD700" }} />
             </p>

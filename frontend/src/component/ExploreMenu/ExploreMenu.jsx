@@ -48,7 +48,7 @@ const ExploreMenu = ({ category, setCategory }) => {
   return (
     <>
       <div className="explore-menu" id="explore-menu">
-        <h1>Explore Our Menu</h1>
+        <h1>Explore Our <span>Menu</span></h1>
         <p className="explore-menu-text">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
           repellat asperiores dolorum, tenetur aliquam voluptate velit fugit,

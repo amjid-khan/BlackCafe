@@ -4,12 +4,17 @@
     align-items: center;
     justify-content: space-between;
     padding: 20px 0;
+    background-color: black;
+    border-bottom: 2px solid white;
+}
+.navbar .logo{
+    color: white;
 }
 .navbar-menu{
     display: flex;
     list-style: none;
     gap: 40px;
-    color: #49557e;
+    color: white;
     font-size: 18px;
     cursor: pointer;
 }
@@ -21,7 +26,7 @@
 .navbar button{
     background: transparent;
     font-size: 16px;
-    color: #49557e;
+    color: white;
     border: 1px solid crimson;
     padding: 8px 30px;
     border-radius: 50px;
@@ -29,7 +34,7 @@
     transition: 0.3s ;
 }
 .navbar button:hover{
-    background-color: #fff4f2;
+    background-color: crimson;
 }
 .navbar .active{
     padding-bottom: 2px;
@@ -37,11 +42,14 @@
 }
 .search-icon{
     font-size: 25px;
-    font-weight: 700;
+    font-weight: 900;
+    color: #fff2ef;
+    cursor: pointer;
 }
 .cart-icon{
     font-size: 20px;
     font-weight: 700;
+    color: white;
 }
 .navbar-search-icon{
     position: relative;

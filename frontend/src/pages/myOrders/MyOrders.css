@@ -1,6 +1,9 @@
 .my-order{
     margin: 50px 0px
 }
+.my-order h2{
+    color: white;
+}
 .my-order .container{
     display: flex;
     flex-direction: column;
@@ -14,7 +17,7 @@
     gap: 30px;
     font-size: 14px;
     padding: 10px 20px;
-    color: #454545;
+    color: white;
     border: 1px solid crimson;
 }
 .my-orders-order img {
@@ -25,7 +28,7 @@
 }
 .my-orders-order p b {
     font-weight: 500;
-    color: #454545;
+    color: white;
 }
 .my-orders-order button {
     border: none;

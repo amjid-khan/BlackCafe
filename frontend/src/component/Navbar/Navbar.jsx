@@ -7,6 +7,7 @@ import { StoreContext } from "../context/StoreContext";
 import { IoBag } from "react-icons/io5";
 import { IoLogOut } from "react-icons/io5";
 import { FaUserAlt } from "react-icons/fa";
+import { toast } from "react-toastify";
 
 
 const Navbar = ({ setShowLogin }) => {
@@ -21,7 +22,7 @@ const Navbar = ({ setShowLogin }) => {
   return (
     <div className="navbar">
       <Link to="/">
-        <h1>Logo</h1>
+        <h1 className="logo">Logo</h1>
       </Link>
       <ul className="navbar-menu">
         <Link
@@ -65,7 +66,7 @@ const Navbar = ({ setShowLogin }) => {
           <button onClick={() => setShowLogin(true)}>sign in</button>
         ) : (
           <div className="navbar-profile">
-            <FaUserAlt className="profile-icon"/>
+            <FaUserAlt style={{color : "white"}} className="profile-icon"/>
             <ul className="nav-profile-dropdown">
               <li onClick={()=> navigate("/myorders")}>
                 <IoBag  style={{color : "crimson"}}/> <p>Orders</p>

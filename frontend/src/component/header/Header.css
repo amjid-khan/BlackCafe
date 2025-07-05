@@ -1,25 +1,36 @@
-
 .header {
   margin-top: 30px;
   width: 100%;
   min-height: 70vh;
-  background: url("/1.jpg") no-repeat center center / cover;
+  background: url("/header.jpg") no-repeat center center / cover;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   padding-left: 10%;
+  animation: slideRightTop 2s;
+  border-radius: 20px;
 }
 
 .header-content {
-  max-width: 600px;
+  max-width: 800px;
   color: white;
   animation: fadeIn 2s ease-in-out;
+  text-align: center;
+  animation: slideLeftTop 2s;
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+}
+.header-content p span{
+  color: crimson;
+  font-size: 1.4rem;
+  text-decoration: underline;
 }
 
 .header-content h2 {
   font-size: 3rem;
   margin-bottom: 1rem;
+  color: crimson;
 }
 
 .header-content p {

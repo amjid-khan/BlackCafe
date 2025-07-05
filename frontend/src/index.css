@@ -9,6 +9,7 @@
 }
 body{
   min-height: 100vh;
+  background-color: black;
 }
 a{
   text-decoration: none;
@@ -19,11 +20,55 @@ a{
   margin: auto;
 }
 
+.Toastify__toast {
+  font-size: 0.85rem;
+  padding: 8px 12px;
+  min-height: 40px;
+  border-radius: 6px;
+}
+
+.Toastify__toast-body > div:first-child {
+  font-size: 1rem;
+}
+
+.Toastify__close-button {
+  font-size: 1rem;
+  margin-right: 6px;
+}
+
+.Toastify__progress-bar {
+  height: 3px;
+}
+
+
 @keyframes fadeIn {
   0%{
     opacity: 0;
   }
   100%{
+    opacity: 1;
+  }
+}
+
+@keyframes slideRightTop {
+  0% {
+    transform: translate(100%, -20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+
+@keyframes slideLeftTop {
+  0% {
+    transform: translate(-100%, -20px); 
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0); 
     opacity: 1;
   }
 }

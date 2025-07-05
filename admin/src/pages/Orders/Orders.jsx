@@ -12,7 +12,6 @@ const Orders = ({url}) => {
     const response = await axios.get(url + "/api/order/list")
     if (response.data.success) {
       setOrder(response.data.data)
-      console.log(response.data.data)
     }
   }
   const statusHandler = async (e, orderId) => {

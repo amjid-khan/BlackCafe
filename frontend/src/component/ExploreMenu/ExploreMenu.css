@@ -5,12 +5,13 @@
     gap: 20px;
 }
 .explore-menu h1{
-    color: #262626;
+    color: white;
+    text-align: center;
     font-weight: 500;
 }
 .explore-menu-text{
-    max-width: 60%;
-    color: #808080;
+    color: white;
+    text-align: center;
 }
 .explore-menu-list{
     display: flex;
@@ -32,12 +33,26 @@
     max-width: 120px;
     border-radius: 50%;
     object-fit: cover;
+    cursor: pointer;
+}
+.explore-menu h1 span{
+    color: crimson;
+    border-bottom: 2px solid crimson;
 }
 
 
 .explore-menu-list-item p {
     margin-top: 10px;
-    color: #747474;
+    color: white;
+        cursor: pointer;
+}
+
+.explore-menu-list-item p::first-letter{
+    color: crimson;
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: 1.3rem;
+    text-decoration: underline;
 }
 .explore-menu-list-item hr{
     margin: 10px 0;

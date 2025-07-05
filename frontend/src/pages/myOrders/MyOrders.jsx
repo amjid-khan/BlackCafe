@@ -24,7 +24,7 @@ const MyOrders = () => {
 
   return (
       <div className="my-order">
-          <h2>My Orders</h2>
+          <h2 >My Orders</h2>
           <div className="container">
               {data.map((order, index) => {
                   return (

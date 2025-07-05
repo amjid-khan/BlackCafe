@@ -40,6 +40,11 @@
     color: #ffffff;
     margin: 0;
 }
+.food-item-name-rating p::first-letter{
+    color: crimson;
+    font-size: 1.3rem;
+    text-decoration: underline;
+}
 
 .food-item-description {
     color: #aaaaaa;
@@ -49,10 +54,15 @@
 }
 
 .food-item-price {
-    color: #e63946; /* Crimson shade */
     font-size: 24px;
-    font-weight: 700;
+    font-weight: 300;
     margin-top: 15px;
+    color: crimson;
+}
+.food-item-price span{
+    font-size: .9rem;
+    margin-right: 3px;
+    color: white;
 }
 
 .food-item-img-container {

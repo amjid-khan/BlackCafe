@@ -6,6 +6,10 @@
     color: white;
     text-align: center;
 }
+.food-display h2 span {
+    color: crimson;
+    border-bottom: 2px solid crimson;
+}
 .food-display h2{
     font-size: max(2vw , 24px);
     font-weight: 600;

@@ -1,8 +1,9 @@
 
-
 import { createContext, useEffect, useState } from "react";
 import axios from "axios"
+import { toast } from "react-toastify";
 export const StoreContext = createContext(null);
+
 
 const StorecontextProvider = (props) => {
   const [cartItems, setCartItems] = useState({});
@@ -13,8 +14,10 @@ const StorecontextProvider = (props) => {
   const addToCart = async (itemId) => {
     if (!cartItems[itemId]) {
       setCartItems((prev) => ({ ...prev, [itemId]: 1 }));
+      toast.success("Item added")
     } else {
       setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
+       toast.success("Item quantity increase by 1 ")
     }
     if (token) {
       await axios.post(url + "/api/cart/add" , {itemId} , {headers : {token}})
@@ -23,6 +26,7 @@ const StorecontextProvider = (props) => {
   // remove from cart
   const removeFromCart =async (itemId) => {
     setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }));
+    toast.success("Item removed")
     if (token) {
       await axios.post(url + "/api/cart/remove" , {itemId} , {headers : {token}})
     }

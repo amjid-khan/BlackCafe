@@ -5,44 +5,44 @@ import "./ExploreMenu.css";
 const ExploreMenu = ({ category, setCategory }) => {
   const menu_list = [
     {
-      name: "Salaad",
+      name: "Burgers",
       image: "/3.jpg",
     },
     {
       name: "Rolls",
-      image: "/4.jpg",
+      image: "/roll.jpg",
     },
     {
-      name: "menu 3",
-      image: "/5.jpg",
+      name: "Pizza",
+      image: "pizza.jpg",
     },
     {
-      name: "manu 1",
-      image: "/3.jpg",
+      name: "Sandwiches",
+      image: "sandwiches.jpg",
     },
     {
-      name: "menu 2",
-      image: "/4.jpg",
+      name: "Pasta",
+      image: "/pasta.jpg",
     },
     {
-      name: "menu 3",
-      image: "/5.jpg",
+      name: "Noodles",
+      image: "/noodles.jpg",
     },
     {
-      name: "menu 3",
-      image: "/5.jpg",
+      name: "Soups",
+      image: "/soap.jpg",
     },
     {
-      name: "manu 1",
-      image: "/3.jpg",
+      name: "Salads",
+      image: "/salad.jpg",
     },
     {
-      name: "menu 2",
-      image: "/4.jpg",
+      name: "Drinks",
+      image: "/drink.jpg",
     },
     {
-      name: "menu 3",
-      image: "/5.jpg",
+      name: "BreakFast",
+      image: "/break.jpg",
     },
   ];
   return (

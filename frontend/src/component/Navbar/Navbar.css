@@ -3,14 +3,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 130px;
+    padding: 20px 0px;
     background-color: black;
     border-bottom: 2px solid white;
-    position: fixed;
-    z-index: 1;
-    width: 100%;
-    top: 0;
-    right: 0;
 }
 .navbar .logo{
     color: white;
@@ -100,7 +95,7 @@
 }
 @media (max-width: 1050px){
     .navbar .logo{
-        width: 140px;
+        font-size: 30px;
     }
     .navbar-menu{
         gap: 20px;
@@ -117,15 +112,15 @@
     }
 }
 @media (max-width:900px){
-    .navbar{
-        padding: 20px 70px;
-    }
     .navbar .logo{
-        width: 120px;
+        font-size: 30px;
     }
     .navbar-menu{
         gap: 15px;
         gap: 16px;
+    }
+    .navbar-menu{
+       display: none;
     }
     .navbar-right{
         gap: 20px;
@@ -138,17 +133,9 @@
         font-size: 15px;
     }
 }
-@media (max-width:800px){
-    .navbar{
-        padding: 20px 60px;
-    }
-    .navbar-menu{
-       display: none;
-    }
-}
 @media (max-width:450px){
-    .navbar{
-        padding: 20px 30px;
+    .navbar .logo{
+        font-size: 20px;
     }
     .navbar-menu{
        display: none;

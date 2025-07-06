@@ -5,7 +5,7 @@ const AppDownload = () => {
   return (
     <div className="app-download" id="app-download">
       <p>
-        For Better Experience Download <br /> Tomato App
+        For Better <span style={{color:"crimson" , textDecoration : "underline"}}>Experience Download</span> <br /> <span style={{color : "crimson" , textDecoration :"underline"}}>B</span>lack <span style={{color : "crimson" , textDecoration: "underline"}}>C</span>afe App
       </p>
       <div className="app-download-platform">
         <img

@@ -10,7 +10,7 @@ const Footer = () => {
     <div className="footer" id="footer">
       <div className="footer-content">
         <div className="footer-content-left">
-          <h2 className="h2">LOGO</h2>
+          <h2 className="h2">Black <span style={{color : "crimson" , textDecoration : "underline"}}>Cafe</span></h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum
             labore, ullam qui ut expedita non libero in possimus, delectus nihil
@@ -24,9 +24,11 @@ const Footer = () => {
             <p>
               <FaTwitter />
             </p>
-            <p>
+            <a href="https://www.linkedin.com/in/amjid-khan-494315363" target="_blank">
+                <p>
               <FaLinkedinIn />
             </p>
+            </a>
           </div>
         </div>
         <div className="footer-content-center">

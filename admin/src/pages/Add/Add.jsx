@@ -81,6 +81,7 @@ const Add = ({url}) => {
           <textarea
             name="description"
             rows="6"
+            style={{background : "transparent" , border : "1px solid white" , borderRadius : "10px" , color : "white"} }
             onChange={onChangeHandler}
             value={data.description}
             placeholder="Write content here"
@@ -90,7 +91,7 @@ const Add = ({url}) => {
         <div className="add-category-price">
           <div className="add-category">
             <p>Product Category</p>
-            <select onChange={onChangeHandler} name="category" required>
+            <select style={{background : "transparent" , color : "white"}} onChange={onChangeHandler} name="category" required>
               <option value="Burgers">Burgers</option>
               <option value="Rolls">Rolls</option>
               <option value="Pizza">Pizza</option>

@@ -1,5 +1,5 @@
 .header {
-  margin-top: 120px;
+  margin-top: 20px;
   width: 100%;
   min-height: 70vh;
   background: url("/header.jpg") no-repeat center center / cover;
@@ -13,8 +13,9 @@
 }
 
 .header-content {
-  max-width: 800px;
+  max-width: 900px;
   color: white;
+ 
   animation: fadeIn 2s ease-in-out;
   text-align: center;
   animation: slideLeftTop 2s;

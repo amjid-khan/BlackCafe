@@ -25,11 +25,15 @@
 .sidebar-option #admin-icons{
     font-size: 1.4rem;
     margin-top: 7px;
+    color: white;
 }
 .sidebar-option.active{
-    background-color: #fff0ed;
+    background-color: transparent;
     border-color: crimson;
 }
+#list-name{
+    color: white;
+ }
 @media (max-width:800px){
     .sidebar-option #list-name{
         display: none;

@@ -22,7 +22,9 @@ const Navbar = ({ setShowLogin }) => {
   return (
     <div className="navbar">
       <Link to="/">
-        <h1 className="logo">Logo</h1>
+        <h1 className="logo">
+          Black <span style={{ color: "crimson" ,textDecoration : "underline"}}>Cafe</span>
+        </h1>
       </Link>
       <ul className="navbar-menu">
         <Link
@@ -66,14 +68,14 @@ const Navbar = ({ setShowLogin }) => {
           <button onClick={() => setShowLogin(true)}>sign in</button>
         ) : (
           <div className="navbar-profile">
-            <FaUserAlt style={{color : "white"}} className="profile-icon"/>
+            <FaUserAlt style={{ color: "white" }} className="profile-icon" />
             <ul className="nav-profile-dropdown">
-              <li onClick={()=> navigate("/myorders")}>
-                <IoBag  style={{color : "crimson"}}/> <p>Orders</p>
+              <li onClick={() => navigate("/myorders")}>
+                <IoBag style={{ color: "crimson" }} /> <p>Orders</p>
               </li>
               <hr />
               <li onClick={handleLogout}>
-                <IoLogOut style={{color : "crimson"}}/> <p>Logout</p>
+                <IoLogOut style={{ color: "crimson" }} /> <p>Logout</p>
               </li>
             </ul>
           </div>
